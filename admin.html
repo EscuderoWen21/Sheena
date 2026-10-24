@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard - Poultry Palace</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+<div class="admin-layout">
+  <aside class="sidebar">
+    <div class="sidebar-logo">🐔 Poultry Palace</div>
+    <nav class="sidebar-nav">
+      <a class="active" href="admin.html">Dashboard</a>
+      <a href="#products">Products</a>
+      <a href="#categories">Categories</a>
+      <a href="#inventory">Inventory</a>
+      <a href="#">Orders</a>
+      <a href="#">Customers</a>
+      <a href="#">Reports</a>
+      <a href="#">Settings</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </aside>
+  <main class="admin-main">
+    <header class="admin-header">
+      <div>
+        <h1>Welcome to Poultry Palace</h1>
+        <p>Manage your poultry business</p>
+      </div>
+      <div class="header-actions">
+        <input type="search" placeholder="Search products..." class="search">
+        <span class="icon">🔔</span>
+        <span class="profile">Admin</span>
+      </div>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card"><div class="stat-icon">🐔</div><div class="stat-num">3</div><div class="stat-label">Total Chickens</div></div>
+      <div class="stat-card"><div class="stat-icon">✅</div><div class="stat-num">2</div><div class="stat-label">Available Chickens</div></div>
+      <div class="stat-card"><div class="stat-icon">📦</div><div class="stat-num">1</div><div class="stat-label">Sold Chickens</div></div>
+      <div class="stat-card"><div class="stat-icon">💰</div><div class="stat-num">₱1100</div><div class="stat-label">Total Revenue</div></div>
+    </section>
+
+    <section id="products" class="section-card">
+      <div class="section-head">
+        <h2>Product Management</h2>
+        <button class="btn btn-yellow">Add Chicken</button>
+      </div>
+      <div class="filters">
+        <input type="search" placeholder="Search products..." class="search">
+        <select><option>All Categories</option><option>4-month-old</option><option>5-month-old</option><option>6-month+</option></select>
+        <select><option>All Availability</option><option>Available</option><option>Sold Out</option></select>
+      </div>
+      <div class="table-wrap">
+        <table class="inventory">
+          <thead><tr><th>Image</th><th>Name</th><th>Breed</th><th>Age</th><th>Price</th><th>Stock</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td><img class="thumb" src="images/chickens/pullet.jpg" alt=""></td><td>Rhode Island Red Pullet</td><td>Rhode Island Red</td><td>4</td><td>₱450</td><td>10</td><td><span class="badge available">Available</span></td><td><button class="btn small">Edit</button> <button class="btn small btn-danger">Delete</button></td></tr>
+            <tr><td><img class="thumb" src="images/chickens/leghorn.jpg" alt=""></td><td>Leghorn Hen</td><td>Leghorn</td><td>5</td><td>₱650</td><td>8</td><td><span class="badge available">Available</span></td><td><button class="btn small">Edit</button> <button class="btn small btn-danger">Delete</button></td></tr>
+            <tr><td><img class="thumb" src="images/chickens/native.jpg" alt=""></td><td>Native Rooster</td><td>Native</td><td>6+</td><td>₱900</td><td>0</td><td><span class="badge soldout">Sold Out</span></td><td><button class="btn small">Edit</button> <button class="btn small btn-danger">Delete</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="inventory" class="section-card">
+      <h2>Inventory Overview</h2>
+      <div class="inv-grid">
+        <div class="inv-card"><div>Total Inventory</div><strong>18</strong></div>
+        <div class="inv-card"><div>Available Stock</div><strong>18</strong></div>
+        <div class="inv-card"><div>Low Stock</div><strong>0</strong></div>
+        <div class="inv-card"><div>Out of Stock</div><strong>1</strong></div>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2>Recent Products</h2>
+      <div class="recent-grid">
+        <div class="recent-card"><img src="images/chickens/pullet.jpg" alt=""><div><strong>Rhode Island Red Pullet</strong><br>₱450 · Available</div></div>
+        <div class="recent-card"><img src="images/chickens/leghorn.jpg" alt=""><div><strong>Leghorn Hen</strong><br>₱650 · Available</div></div>
+        <div class="recent-card"><img src="images/chickens/native.jpg" alt=""><div><strong>Native Rooster</strong><br>₱900 · Sold Out</div></div>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
